@@ -1,0 +1,59 @@
+<div class="container">
+    <%= form_tag("/form/save") do %>
+    <input type="hidden" name="name" value="<%= @name %>" >
+    <input type="hidden" name="radio" value="<%= @radio %>" >
+
+    <div class="form-group">
+            <label class="control-label">依頼のある担当の名前</label>
+            <select name="charge"class="form-control">
+              <option value="局長">局長</option>
+              <option value="二局">二局</option>
+              <option value="案内所">案内所</option>
+              <option value="環境">環境</option>
+              <option value="警備">警備</option>
+              <option value="借用">借用</option>
+              <option value="車両">車両</option>
+              <option value="模擬店">模擬店</option>
+              <option value="講義室">講義室</option>
+              <option value="その他">その他</option>
+              <option value="共催">共催</option>
+              <option value="食品">食品</option>
+              <option value="レンタル">レンタル</option>
+              <option value="おすすめ">おすすめ</option>
+              <option value="司会">司会</option>
+              <option value="資料">資料</option>
+              <option value="電源">電源</option>
+              <option value="研究室公開">研究室公開</option>
+              <option value="研究室スタンプラリー">研究室スタンプラリー</option>
+              <option value="研究室ツアー">研究室ツアー</option>
+              <option value="公開講義">公開講義</option>
+              <option value="他局">他局</option>
+              <option value="委員長副委員長">委員長副委員長</option>
+              <option value="会計">会計</option>
+            </select>
+        </div>
+        
+        
+        <div class="form-group">
+          <label class="control-label">追加する項目</label>
+          <input name="item"class="form-control" type="text">
+        </div>
+        
+        <div class="form-group">
+          <label class="control-label">どのような団体に向けての追加か</label>
+          <textarea name="who"class="form-control"  rows="3"></textarea>
+        </div>
+        
+        <div class="form-group">
+          <label class="control-label">追加の具体的な内容</label>
+          <textarea name="content" class="form-control"  rows="10"></textarea>
+        </div>
+        
+        <div class="form-group">
+          <label class="control-label">なぜそのような追加をしたのか</label>
+          <textarea name="why" class="form-control"  rows="5"></textarea>
+        </div>
+        
+        <button type="submit">提出</button>
+    <% end %>
+</div>

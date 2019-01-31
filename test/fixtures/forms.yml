@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: 1
+  radio: MyString
+  charge: MyString
+  item: MyString
+  who: MyString
+  content: MyString
+  why: MyString
+
+two:
+  name: 1
+  radio: MyString
+  charge: MyString
+  item: MyString
+  who: MyString
+  content: MyString
+  why: MyString

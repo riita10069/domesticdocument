@@ -1,0 +1,39 @@
+<div class="container">
+    <%= form_tag("/form/update/"+@form.id.to_s) do %>
+    <input type="hidden" name="name" value="<%= @form.name %>" >
+    <input type="hidden" name="radio" value="<%= @form.radio %>" >
+
+    <div class="form-group">
+            <label class="control-label">依頼のある担当の名前</label>
+            <select name="charge"class="form-control">
+              <% charges = ["局長", "二局", "案内所","環境","警備","借用","車両","模擬店","講義室","その他","共催","食品","レンタル","おすすめ","司会","資料","電源","研究室公開","研究室スタンプラリー","研究室ツアー","公開講義","他局","委員長副委員長","会計"]
+              charges.each do |charge|%>
+              <option value="<%=charge%>" <%= "selected" if charge == @form.charge %>><%=charge%></option>
+            <% end %>
+            </select>
+        </div>
+        
+        
+        <div class="form-group">
+          <label class="control-label">追加する項目</label>
+          <input name="item"class="form-control" type="text" value="<%=@form.item%>">
+        </div>
+        
+        <div class="form-group">
+          <label class="control-label">どのような団体に向けての追加か</label>
+          <textarea name="who"class="form-control"  rows="3"><%=@form.who%></textarea>
+        </div>
+        
+        <div class="form-group">
+          <label class="control-label">追加の具体的な内容</label>
+          <textarea name="content" class="form-control"  rows="10"><%=@form.content%></textarea>
+        </div>
+        
+        <div class="form-group">
+          <label class="control-label">なぜそのような追加をしたのか</label>
+          <textarea name="why" class="form-control"  rows="5"><%=@form.why%></textarea>
+        </div>
+        
+        <button type="submit">提出</button>
+    <% end %>
+</div>
